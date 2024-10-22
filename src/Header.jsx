@@ -19,35 +19,35 @@ function Header() {
 
   return (
     <>
-      <header className="hidden md:flex bg-green-400 px-3 min-h-11 gap-4">
-        <h1 className="font-bold flex items-center">Car Batteries</h1>
+      <header className="hidden md:flex bg-green-400 px-3 min-h-16 gap-4">
+        <Link to="/" className="font-bold font-custom flex items-center">Car Batteries</Link>
         <nav className="flex justify-center flex-1">
           <ul className="flex justify-center gap-6">
-            <li className="relative group z-10 flex items-center rounded-md border-l-2 p-2 border-green-400 hover:border-black ">
+            <li className="relative group z-10 font-custom font-bold flex items-center rounded-md border-l-2 p-2 border-green-400 hover:border-black ">
               Who We Are
               <div className="absolute z-0 left-0 top-full min-w-[200px] hidden group-hover:flex flex-col bg-white shadow-lg">
-                <div className="hover:bg-purple-700 p-2 hover:text-white">
+                <div className="hover:bg-purple-700 p-2 font-custom font-bold hover:text-white">
                   About Us
                 </div>
-                <div className="hover:bg-purple-700 p-2 hover:text-white">
+                <div className="hover:bg-purple-700 p-2 font-custom font-bold hover:text-white">
                   Warranty
                 </div>
-                <div className="hover:bg-purple-700 p-2 hover:text-white">
+                <div className="hover:bg-purple-700 p-2 font-custom font-bold hover:text-white">
                   Battery Brands
                 </div>
               </div>
             </li>
-            <li className="flex items-center rounded-md border-l-2 p-2 border-green-400 hover:border-black"><Link to="/shop">Shop</Link></li>
-            <li className="relative group flex items-center rounded-md border-l-2 p-2 border-green-400 hover:border-black">
+            <li className="flex items-center font-custom font-bold rounded-md border-l-2 p-2 border-green-400 hover:border-black"><Link to="/shop">Shop</Link></li>
+            <li className="relative group font-custom font-bold flex items-center rounded-md border-l-2 p-2 border-green-400 hover:border-black">
               News
               <div className="absolute left-0 top-full min-w-[200px] hidden group-hover:flex flex-col bg-white shadow-lg">
-                <div className="hover:bg-purple-700 p-2 hover:text-white">
+                <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   Updates
                 </div>
-                <div className="hover:bg-purple-700 p-2 hover:text-white">
+                <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   Events
                 </div>
-                <div className="hover:bg-purple-700 p-2 hover:text-white">
+                <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   Useful Tips
                 </div>
               </div>
@@ -56,8 +56,8 @@ function Header() {
         </nav>
       </header>
 
-      <header className="bg-green-400 md:hidden px-3 min-h-11 gap-4 flex justify-between items-center relative">
-        <h1 className="font-bold flex items-center">Car Batteries</h1>
+      <header className="bg-green-400 md:hidden px-3 min-h-16 gap-4 flex justify-between items-center relative">
+        <Link to="/" className="font-bold font-custom flex items-center">Car Batteries</Link>
         <svg
           className="size-8"
           onClick={toggleNav}
@@ -87,7 +87,7 @@ function Header() {
         >
           <ul>
             <li className="p-2">
-              <div className="flex justify-between">
+              <div className="flex font-custom font-bold justify-between">
                 Who We Are
                 <svg
                   className="size-5 inline-block ml-auto"
@@ -115,20 +115,20 @@ function Header() {
                 </svg>
               </div>
               <div className={`${who ? "block" : "hidden"} flex-col`}>
-                <div className="hover:bg-purple-700 p-2 hover:text-white">
+                <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   About Us
                 </div>
-                <div className="hover:bg-purple-700 p-2 hover:text-white">
+                <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   Warranty
                 </div>
-                <div className="hover:bg-purple-700 p-2 hover:text-white">
+                <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   Battery Brands
                 </div>
               </div>
             </li>
-            <li className="p-2">Shop</li>
+            <li className="p-2 font-custom font-bold"><Link to="/shop">Shop</Link></li>
             <li className="p-2">
-              <div className="flex justify-between">
+              <div className="flex font-custom font-bold justify-between">
                 News
                 <svg
                   className="size-5"
@@ -156,13 +156,13 @@ function Header() {
                 </svg>
               </div>
               <div className={`${news ? "block" : "hidden"} flex-col`}>
-                <div className="hover:bg-purple-700 p-2 hover:text-white">
+                <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   Updates
                 </div>
-                <div className="hover:bg-purple-700 p-2 hover:text-white">
+                <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   Events
                 </div>
-                <div className="hover:bg-purple-700 p-2 hover:text-white">
+                <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   Useful Tips
                 </div>
               </div>

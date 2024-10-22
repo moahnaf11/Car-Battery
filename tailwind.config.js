@@ -2,7 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        custom: ["intro_rust_gbase_2_line", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
