@@ -20,12 +20,15 @@ function Header() {
   return (
     <>
       <header className="hidden md:flex bg-green-400 px-3 min-h-16 gap-4">
-        <Link to="/" className="font-bold font-custom flex items-center">Car Batteries</Link>
+        <Link to="/" className="font-bold font-custom flex items-center">
+          Car Batteries
+        </Link>
         <nav className="flex justify-center flex-1">
           <ul className="flex justify-center gap-6">
-            <li className="relative group z-10 font-custom font-bold flex items-center rounded-md border-l-2 p-2 border-green-400 hover:border-black ">
+            <li className="relative group z-10 font-custom font-bold flex items-center rounded-md p-2">
               Who We Are
-              <div className="absolute z-0 left-0 top-full min-w-[200px] hidden group-hover:flex flex-col bg-white shadow-lg">
+              <span className="h-1 bg-black bottom-1 scale-x-0 group-hover:scale-x-100 left-0 right-0 origin-left transition-transform duration-300 ease-out absolute"></span>
+              <div className="absolute z-0 origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-300 ease-out left-0 top-full min-w-[200px] flex flex-col bg-white shadow-lg">
                 <div className="hover:bg-purple-700 p-2 font-custom font-bold hover:text-white">
                   About Us
                 </div>
@@ -37,10 +40,14 @@ function Header() {
                 </div>
               </div>
             </li>
-            <li className="flex items-center font-custom font-bold rounded-md border-l-2 p-2 border-green-400 hover:border-black"><Link to="/shop">Shop</Link></li>
-            <li className="relative group font-custom font-bold flex items-center rounded-md border-l-2 p-2 border-green-400 hover:border-black">
+            <li className="flex relative group items-center font-custom font-bold rounded-md p-2 ">
+              <Link to="/shop">Shop</Link>
+              <span className="h-1 bg-black bottom-1 scale-x-0 group-hover:scale-x-100 left-0 right-0 origin-left transition-transform duration-300 ease-out absolute"></span>
+            </li>
+            <li className="relative group font-custom font-bold flex items-center rounded-md p-2">
               News
-              <div className="absolute left-0 top-full min-w-[200px] hidden group-hover:flex flex-col bg-white shadow-lg">
+              <span className="h-1 bg-black bottom-1 scale-x-0 group-hover:scale-x-100 left-0 right-0 origin-left transition-transform duration-300 ease-out absolute"></span>
+              <div className="absolute z-10 left-0 top-full min-w-[200px] flex flex-col bg-white shadow-lg origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-300 ease-out">
                 <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   Updates
                 </div>
@@ -57,7 +64,9 @@ function Header() {
       </header>
 
       <header className="bg-green-400 md:hidden px-3 min-h-16 gap-4 flex justify-between items-center relative">
-        <Link to="/" className="font-bold font-custom flex items-center">Car Batteries</Link>
+        <Link to="/" className="font-bold font-custom flex items-center">
+          Car Batteries
+        </Link>
         <svg
           className="size-8"
           onClick={toggleNav}
@@ -81,8 +90,10 @@ function Header() {
           </g>
         </svg>
         <nav
-          className={`absolute top-full z-10 w-full bg-white p-2 left-0 ${
-            isNavOpen ? "block" : "hidden"
+          className={`absolute top-full z-10 w-full bg-white p-2 left-0 transition-all duration-300 ease-out ${
+            isNavOpen
+              ? "opacity-100 translate-x-0"
+              : "-translate-x-full opacity-0"
           }`}
         >
           <ul>
@@ -114,7 +125,7 @@ function Header() {
                   </g>
                 </svg>
               </div>
-              <div className={`${who ? "block" : "hidden"} flex-col`}>
+              <div className={`${who ? "open" : ""} flex-col custom`}>
                 <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   About Us
                 </div>
@@ -126,7 +137,9 @@ function Header() {
                 </div>
               </div>
             </li>
-            <li className="p-2 font-custom font-bold"><Link to="/shop">Shop</Link></li>
+            <li className="p-2 font-custom font-bold">
+              <Link to="/shop">Shop</Link>
+            </li>
             <li className="p-2">
               <div className="flex font-custom font-bold justify-between">
                 News
@@ -155,7 +168,7 @@ function Header() {
                   </g>
                 </svg>
               </div>
-              <div className={`${news ? "block" : "hidden"} flex-col`}>
+              <div className={`${news ? "open" : ""} flex-col custom`}>
                 <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   Updates
                 </div>

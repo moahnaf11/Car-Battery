@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'intro_rust_gbase_2_line';
-  src: url('/introrustg-base2line-webfont.woff2') format('woff2');
+  font-family: "intro_rust_gbase_2_line";
+  src: url("/introrustg-base2line-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -15,3 +15,27 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
+.custom {
+  display: none;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: display 1s, opacity 1s, transform 1s;
+}
+
+.open {
+  display: flex;
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+@starting-style {
+  .open {
+    opacity: 0;
+  }
+}
+
+
+
