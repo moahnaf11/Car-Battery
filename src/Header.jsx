@@ -97,7 +97,7 @@ function Header() {
           }`}
         >
           <ul>
-            <li className="p-2">
+            <li className="p-2 h-min">
               <div className="flex font-custom font-bold justify-between">
                 Who We Are
                 <svg
@@ -125,7 +125,7 @@ function Header() {
                   </g>
                 </svg>
               </div>
-              <div className={`${who ? "open" : ""} flex-col custom`}>
+              <div className={`${who ? "scale-y-100 opacity-100 max-h-96" : "scale-y-0 opacity-0 max-h-0"} origin-top flex flex-col transition-all duration-300 ease-out`}>
                 <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   About Us
                 </div>
@@ -168,7 +168,7 @@ function Header() {
                   </g>
                 </svg>
               </div>
-              <div className={`${news ? "open" : ""} flex-col custom`}>
+              <div className={`${news ? "scale-y-100 opacity-100 max-h-96" : "scale-y-0 opacity-0 max-h-0"} origin-top flex flex-col transition-all duration-300 ease-out`}>
                 <div className="hover:bg-purple-700 font-custom font-bold p-2 hover:text-white">
                   Updates
                 </div>
